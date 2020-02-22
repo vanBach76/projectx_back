@@ -1,0 +1,39 @@
+type Query {
+  userById(id: ID): User
+}
+
+type User {
+  id: ID
+  name: String!
+  companies: [Company]
+}
+
+type Company {
+  id: ID
+  user: User!
+  name: String!
+  currency: String
+  reportCards: [ReportCard]
+}
+
+type ReportCard {
+    id: ID
+    company: Company!
+    period: PeriodEnum!
+    comment: String
+    reportData: [ReportData]
+}
+
+type ReportData {
+    id: ID
+    reportCard: ReportCard!
+    dataFieldName: String!
+    dataFieldValue: Float
+}
+
+enum PeriodEnum {
+    Q1
+    Q2
+    Q3
+    Q4
+ }
