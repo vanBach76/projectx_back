@@ -19,74 +19,87 @@ public class StaticRepository {
         user.setId(0);
         user.setName("karlback");
 
-        Company company0 = new Company();
-        company0.setId(0);
-        company0.setUserId(user.getId());
-        company0.setName("Bahnhof AB");
-        company0.setCurrency("SEK");
+        Company bahnhof = new Company();
+        bahnhof.setId(0);
+        bahnhof.setUserId(user.getId());
+        bahnhof.setName("Bahnhof AB");
+        bahnhof.setCurrency("SEK");
 
-        Company company1 = new Company();
-        company1.setId(1);
-        company1.setUserId(user.getId());
-        company1.setName("Apple");
-        company1.setCurrency("USD");
+        ReportCard q1Bahn2019 = new ReportCard();
+        q1Bahn2019.setId(0);
+        q1Bahn2019.setCompanyId(bahnhof.getId());
+        q1Bahn2019.setYear(2019);
+        q1Bahn2019.setPeriod(PeriodEnum.Q1);
+        q1Bahn2019.setComment("We're going down...");
 
-        ReportCard q1 = new ReportCard();
-        q1.setId(0);
-        q1.setCompanyId(company0.getId());
-        q1.setYear(2019);
-        q1.setPeriod(PeriodEnum.Q1);
-        q1.setComment("We're going down...");
+        ReportData q1Bahn2019Eps = new ReportData();
+        q1Bahn2019Eps.setId(0);
+        q1Bahn2019Eps.setReportCardId(q1Bahn2019.getId());
+        q1Bahn2019Eps.setDataFieldName("EPS");
+        q1Bahn2019Eps.setDataFieldValue(2.43);
 
-        ReportData reportDataQ1 = new ReportData();
-        reportDataQ1.setId(0);
-        reportDataQ1.setReportCardId(q1.getId());
-        reportDataQ1.setDataFieldName("EPS");
-        reportDataQ1.setDataFieldValue(2.43);
+        ReportCard q2Bahn2019 = new ReportCard();
+        q2Bahn2019.setId(1);
+        q2Bahn2019.setCompanyId(bahnhof.getId());
+        q2Bahn2019.setYear(2019);
+        q2Bahn2019.setPeriod(PeriodEnum.Q2);
+        q2Bahn2019.setComment("We're going up!");
 
-        ReportCard q2 = new ReportCard();
-        q2.setId(1);
-        q2.setCompanyId(company0.getId());
-        q2.setYear(2019);
-        q2.setPeriod(PeriodEnum.Q2);
-        q2.setComment("We're going up!");
+        ReportData q2Bahn2019Eps = new ReportData();
+        q2Bahn2019Eps.setId(1);
+        q2Bahn2019Eps.setReportCardId(q2Bahn2019.getId());
+        q2Bahn2019Eps.setDataFieldName("EPS");
+        q2Bahn2019Eps.setDataFieldValue(2.75);
 
-        ReportData reportDataQ2 = new ReportData();
-        reportDataQ2.setId(1);
-        reportDataQ2.setReportCardId(q2.getId());
-        reportDataQ2.setDataFieldName("EPS");
-        reportDataQ2.setDataFieldValue(2.75);
+        ReportCard q3Bahn2019 = new ReportCard();
+        q3Bahn2019.setId(2);
+        q3Bahn2019.setCompanyId(bahnhof.getId());
+        q3Bahn2019.setYear(2019);
+        q3Bahn2019.setPeriod(PeriodEnum.Q3);
+        q3Bahn2019.setComment("We're going down...");
 
-        ReportCard q3 = new ReportCard();
-        q3.setId(2);
-        q3.setCompanyId(company0.getId());
-        q3.setYear(2019);
-        q3.setPeriod(PeriodEnum.Q3);
-        q3.setComment("We're going down...");
+        ReportData q3Bahn2019Eps = new ReportData();
+        q3Bahn2019Eps.setId(2);
+        q3Bahn2019Eps.setReportCardId(q3Bahn2019.getId());
+        q3Bahn2019Eps.setDataFieldName("EPS");
+        q3Bahn2019Eps.setDataFieldValue(2.10);
 
-        ReportData reportDataQ3 = new ReportData();
-        reportDataQ3.setId(2);
-        reportDataQ3.setReportCardId(q3.getId());
-        reportDataQ3.setDataFieldName("EPS");
-        reportDataQ3.setDataFieldValue(2.10);
+        ReportCard q4Bahn2019 = new ReportCard();
+        q4Bahn2019.setId(3);
+        q4Bahn2019.setCompanyId(bahnhof.getId());
+        q4Bahn2019.setYear(2019);
+        q4Bahn2019.setPeriod(PeriodEnum.Q4);
+        q4Bahn2019.setComment("We're going up again!");
 
-        ReportCard q4 = new ReportCard();
-        q4.setId(3);
-        q4.setCompanyId(company0.getId());
-        q4.setYear(2019);
-        q4.setPeriod(PeriodEnum.Q4);
-        q4.setComment("We're going up again!");
+        ReportData q4Bahn2019Eps = new ReportData();
+        q4Bahn2019Eps.setId(3);
+        q4Bahn2019Eps.setReportCardId(q4Bahn2019.getId());
+        q4Bahn2019Eps.setDataFieldName("EPS");
+        q4Bahn2019Eps.setDataFieldValue(3.10);
 
-        ReportData reportDataQ4 = new ReportData();
-        reportDataQ4.setId(3);
-        reportDataQ4.setReportCardId(q4.getId());
-        reportDataQ4.setDataFieldName("EPS");
-        reportDataQ4.setDataFieldValue(3.10);
+        Company apple = new Company();
+        apple.setId(1);
+        apple.setUserId(user.getId());
+        apple.setName("Apple");
+        apple.setCurrency("USD");
+
+        ReportCard q1Apple2019 = new ReportCard();
+        q1Apple2019.setId(4);
+        q1Apple2019.setCompanyId(apple.getId());
+        q1Apple2019.setYear(2019);
+        q1Apple2019.setPeriod(PeriodEnum.Q4);
+        q1Apple2019.setComment("Nice margins.");
+
+        ReportData q1Apple2019Eps = new ReportData();
+        q1Apple2019Eps.setId(4);
+        q1Apple2019Eps.setReportCardId(q1Apple2019.getId());
+        q1Apple2019Eps.setDataFieldName("EPS");
+        q1Apple2019Eps.setDataFieldValue(14.10);
 
         users = Arrays.asList(user);
-        companies = Arrays.asList(company0, company1);
-        reportCards = Arrays.asList(q1, q2, q3, q4);
-        reportDatas = Arrays.asList(reportDataQ1, reportDataQ2, reportDataQ3, reportDataQ4);
+        companies = Arrays.asList(bahnhof, apple);
+        reportCards = Arrays.asList(q1Bahn2019, q2Bahn2019, q3Bahn2019, q4Bahn2019, q1Apple2019);
+        reportDatas = Arrays.asList(q1Bahn2019Eps, q2Bahn2019Eps, q3Bahn2019Eps, q4Bahn2019Eps, q1Apple2019Eps);
 
     }
 
