@@ -19,6 +19,7 @@ type Company {
 type ReportCard {
     id: ID
     company: Company!
+    year: Int
     period: PeriodEnum!
     comment: String
     reportData: [ReportData]

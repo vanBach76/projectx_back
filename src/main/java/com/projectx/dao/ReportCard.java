@@ -6,6 +6,7 @@ public class ReportCard {
 
     private int id;
     private int companyId;
+    private int year;
     private PeriodEnum period;
     private String comment;
 
@@ -23,6 +24,14 @@ public class ReportCard {
 
     public void setCompanyId(int companyId) {
         this.companyId = companyId;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public PeriodEnum getPeriod() {
