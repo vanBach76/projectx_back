@@ -25,6 +25,19 @@ public class StaticRepository {
         bahnhof.setName("Bahnhof AB");
         bahnhof.setCurrency("SEK");
 
+        ReportCard q1Bahn2018 = new ReportCard();
+        q1Bahn2018.setId(-1);
+        q1Bahn2018.setCompanyId(bahnhof.getId());
+        q1Bahn2018.setYear(2018);
+        q1Bahn2018.setPeriod(PeriodEnum.Q1);
+        q1Bahn2018.setComment("Looking good!");
+
+        ReportData q1Bahn2018Eps = new ReportData();
+        q1Bahn2018Eps.setId(-1);
+        q1Bahn2018Eps.setReportCardId(q1Bahn2018.getId());
+        q1Bahn2018Eps.setDataFieldName("EPS");
+        q1Bahn2018Eps.setDataFieldValue(1.95);
+
         ReportCard q1Bahn2019 = new ReportCard();
         q1Bahn2019.setId(0);
         q1Bahn2019.setCompanyId(bahnhof.getId());
@@ -98,8 +111,8 @@ public class StaticRepository {
 
         users = Arrays.asList(user);
         companies = Arrays.asList(bahnhof, apple);
-        reportCards = Arrays.asList(q1Bahn2019, q2Bahn2019, q3Bahn2019, q4Bahn2019, q1Apple2019);
-        reportDatas = Arrays.asList(q1Bahn2019Eps, q2Bahn2019Eps, q3Bahn2019Eps, q4Bahn2019Eps, q1Apple2019Eps);
+        reportCards = Arrays.asList(q1Bahn2018, q1Bahn2019, q2Bahn2019, q3Bahn2019, q4Bahn2019, q1Apple2019);
+        reportDatas = Arrays.asList(q1Bahn2018Eps, q1Bahn2019Eps, q2Bahn2019Eps, q3Bahn2019Eps, q4Bahn2019Eps, q1Apple2019Eps);
 
     }
 
