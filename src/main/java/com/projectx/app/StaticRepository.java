@@ -38,6 +38,18 @@ public class StaticRepository {
         q1Bahn2018Eps.setDataFieldName("EPS");
         q1Bahn2018Eps.setDataFieldValue(1.95);
 
+        ReportData q1Bahn2018Sales = new ReportData();
+        q1Bahn2018Sales.setId(5);
+        q1Bahn2018Sales.setReportCardId(q1Bahn2018.getId());
+        q1Bahn2018Sales.setDataFieldName("Sales");
+        q1Bahn2018Sales.setDataFieldValue(250000000);
+
+        ReportData q1Bahn2018Equity = new ReportData();
+        q1Bahn2018Equity.setId(6);
+        q1Bahn2018Equity.setReportCardId(q1Bahn2018.getId());
+        q1Bahn2018Equity.setDataFieldName("Equity");
+        q1Bahn2018Equity.setDataFieldValue(300000000);
+
         ReportCard q1Bahn2019 = new ReportCard();
         q1Bahn2019.setId(0);
         q1Bahn2019.setCompanyId(bahnhof.getId());
@@ -84,6 +96,13 @@ public class StaticRepository {
         q4Bahn2019.setPeriod(PeriodEnum.Q4);
         q4Bahn2019.setComment("We're going up again!");
 
+        ReportCard q1Bahn2020 = new ReportCard();
+        q1Bahn2020.setId(20);
+        q1Bahn2020.setCompanyId(bahnhof.getId());
+        q1Bahn2020.setYear(2020);
+        q1Bahn2020.setPeriod(PeriodEnum.Q1);
+        q1Bahn2020.setComment("Jättebra!");
+
         ReportData q4Bahn2019Eps = new ReportData();
         q4Bahn2019Eps.setId(3);
         q4Bahn2019Eps.setReportCardId(q4Bahn2019.getId());
@@ -111,8 +130,15 @@ public class StaticRepository {
 
         users = Arrays.asList(user);
         companies = Arrays.asList(bahnhof, apple);
-        reportCards = Arrays.asList(q1Bahn2018, q1Bahn2019, q2Bahn2019, q3Bahn2019, q4Bahn2019, q1Apple2019);
-        reportDatas = Arrays.asList(q1Bahn2018Eps, q1Bahn2019Eps, q2Bahn2019Eps, q3Bahn2019Eps, q4Bahn2019Eps, q1Apple2019Eps);
+        reportCards = Arrays.asList(q1Bahn2018, q1Bahn2019, q2Bahn2019, q3Bahn2019, q4Bahn2019, q1Apple2019,q1Bahn2020);
+        reportDatas = Arrays.asList(q1Bahn2018Eps,
+                q1Bahn2019Eps,
+                q2Bahn2019Eps,
+                q3Bahn2019Eps,
+                q4Bahn2019Eps,
+                q1Apple2019Eps,
+                q1Bahn2018Sales,
+                q1Bahn2018Equity);
 
     }
 
