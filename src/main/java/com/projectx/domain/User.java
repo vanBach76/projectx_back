@@ -1,11 +1,13 @@
-package com.projectx.dao;
+package com.projectx.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 public class User {
 
     private int id;
     private String name;
+    private List<Company> companies;
 
     public int getId() {
         return id;
@@ -21,6 +23,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Company> getCompanies() {
+        return companies;
+    }
+
+    public void setCompanies(List<Company> companies) {
+        this.companies = companies;
     }
 
     @Override

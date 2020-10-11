@@ -1,0 +1,2 @@
+1. Implement mutations.
+2. Create services for data manipulation

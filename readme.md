@@ -1,0 +1,1 @@
+This project uses the graphql _kickstart_ implementation of graphql for java. 

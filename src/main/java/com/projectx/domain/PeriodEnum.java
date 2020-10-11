@@ -1,4 +1,4 @@
-package com.projectx.dao;
+package com.projectx.domain;
 
 public enum PeriodEnum {
     Q1,

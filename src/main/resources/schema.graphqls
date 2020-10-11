@@ -2,6 +2,10 @@ type Query {
   userById(id: ID): User
 }
 
+type Mutation {
+    addCompany(companyInput: CompanyInput): ID
+}
+
 type User {
   id: ID
   name: String!
@@ -30,6 +34,12 @@ type ReportData {
     reportCard: ReportCard!
     dataFieldName: String!
     dataFieldValue: Float
+}
+
+input CompanyInput {
+    userId: ID!,
+    name: String!,
+    currency: String!
 }
 
 enum PeriodEnum {

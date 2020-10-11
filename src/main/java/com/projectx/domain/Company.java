@@ -1,13 +1,15 @@
-package com.projectx.dao;
+package com.projectx.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Company {
 
     private int id;
-    private int userId;
     private String name;
     private String currency;
+    private User user;
+    private List<ReportCard> reportCards;
 
     public int getId() {
         return id;
@@ -15,14 +17,6 @@ public class Company {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public String getName() {
@@ -39,6 +33,22 @@ public class Company {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<ReportCard> getReportCards() {
+        return reportCards;
+    }
+
+    public void setReportCards(List<ReportCard> reportCards) {
+        this.reportCards = reportCards;
     }
 
     @Override

@@ -1,13 +1,13 @@
-package com.projectx.dao;
+package com.projectx.domain;
 
 import java.util.Objects;
 
 public class ReportData {
 
     private int id;
-    private int reportCardId;
     private String dataFieldName;
     private double dataFieldValue;
+    private ReportCard reportCard;
 
     public int getId() {
         return id;
@@ -15,14 +15,6 @@ public class ReportData {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getReportCardId() {
-        return reportCardId;
-    }
-
-    public void setReportCardId(int reportCardId) {
-        this.reportCardId = reportCardId;
     }
 
     public String getDataFieldName() {
@@ -39,6 +31,15 @@ public class ReportData {
 
     public void setDataFieldValue(double dataFieldValue) {
         this.dataFieldValue = dataFieldValue;
+    }
+
+
+    public ReportCard getReportCard() {
+        return reportCard;
+    }
+
+    public void setReportCard(ReportCard reportCard) {
+        this.reportCard = reportCard;
     }
 
     @Override

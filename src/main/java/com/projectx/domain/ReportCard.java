@@ -1,14 +1,16 @@
-package com.projectx.dao;
+package com.projectx.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 public class ReportCard {
 
     private int id;
-    private int companyId;
     private int year;
     private PeriodEnum period;
     private String comment;
+    private Company company;
+    private List<ReportData> reportDataList;
 
     public int getId() {
         return id;
@@ -16,14 +18,6 @@ public class ReportCard {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(int companyId) {
-        this.companyId = companyId;
     }
 
     public int getYear() {
@@ -48,6 +42,22 @@ public class ReportCard {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public List<ReportData> getReportDataList() {
+        return reportDataList;
+    }
+
+    public void setReportDataList(List<ReportData> reportDataList) {
+        this.reportDataList = reportDataList;
     }
 
     @Override
