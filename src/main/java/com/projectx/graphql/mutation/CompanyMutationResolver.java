@@ -1,5 +1,6 @@
 package com.projectx.graphql.mutation;
 
+import com.projectx.FileRepository;
 import com.projectx.domain.Company;
 import com.projectx.domain.CompanyInput;
 import com.projectx.graphql.StaticRepository;
@@ -14,7 +15,7 @@ public class CompanyMutationResolver implements GraphQLMutationResolver {
         company.setCurrency(companyInput.getCurrency());
         company.setName(companyInput.getName());
         company.setUser(StaticRepository.getUser(companyInput.getUserId()));
-        return StaticRepository.addCompany(company);
+        return FileRepository.addCompany(company);
     }
 
 }

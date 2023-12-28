@@ -1,5 +1,6 @@
 package com.projectx.graphql.resolver;
 
+import com.projectx.FileRepository;
 import com.projectx.domain.Company;
 import com.projectx.domain.ReportCard;
 import com.projectx.domain.User;
@@ -17,6 +18,6 @@ public class CompanyResolver implements GraphQLResolver<Company> {
     }
 
     public List<ReportCard> reportCards(Company company) {
-        return StaticRepository.getReportCards(company);
+        return FileRepository.getReportCards(company);
     }
 }

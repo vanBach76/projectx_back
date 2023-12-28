@@ -1,5 +1,6 @@
 package com.projectx.graphql.resolver;
 
+import com.projectx.FileRepository;
 import com.projectx.domain.Company;
 import com.projectx.domain.User;
 import com.projectx.graphql.StaticRepository;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 public class UserResolver implements GraphQLResolver<User> {
 
     public List<Company> companies(User user) {
-        return StaticRepository.getCompanies(user);
+        return FileRepository.getCompanies(user);
     }
 
 }

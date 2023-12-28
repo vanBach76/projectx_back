@@ -10,6 +10,7 @@ public class ProjectXApplication {
 
 	public static void main(String[] args) {
 		StaticRepository.init();
+		FileRepository.init();
 		SpringApplication.run(ProjectXApplication.class, args); // test -> http://localhost:8080/graphiql
 	}
 

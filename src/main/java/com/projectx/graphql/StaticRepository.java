@@ -4,7 +4,6 @@ import com.projectx.domain.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,7 +31,7 @@ public class StaticRepository {
         q1Bahn2018.setId(-1);
         q1Bahn2018.setCompany(bahnhof);
         q1Bahn2018.setYear(2018);
-        q1Bahn2018.setPeriod(PeriodEnum.Q1);
+        q1Bahn2018.setPeriod(PeriodEnum.q1);
         q1Bahn2018.setComment("Looking good!");
 
         ReportData q1Bahn2018Eps = new ReportData();
@@ -57,7 +56,7 @@ public class StaticRepository {
         q1Bahn2019.setId(0);
         q1Bahn2019.setCompany(bahnhof);
         q1Bahn2019.setYear(2019);
-        q1Bahn2019.setPeriod(PeriodEnum.Q1);
+        q1Bahn2019.setPeriod(PeriodEnum.q1);
         q1Bahn2019.setComment("We're going down...");
 
         ReportData q1Bahn2019Eps = new ReportData();
@@ -70,7 +69,7 @@ public class StaticRepository {
         q2Bahn2019.setId(1);
         q2Bahn2019.setCompany(bahnhof);
         q2Bahn2019.setYear(2019);
-        q2Bahn2019.setPeriod(PeriodEnum.Q2);
+        q2Bahn2019.setPeriod(PeriodEnum.q2);
         q2Bahn2019.setComment("We're going up!");
 
         ReportData q2Bahn2019Eps = new ReportData();
@@ -83,7 +82,7 @@ public class StaticRepository {
         q3Bahn2019.setId(2);
         q3Bahn2019.setCompany(bahnhof);
         q3Bahn2019.setYear(2019);
-        q3Bahn2019.setPeriod(PeriodEnum.Q3);
+        q3Bahn2019.setPeriod(PeriodEnum.q3);
         q3Bahn2019.setComment("We're going down...");
 
         ReportData q3Bahn2019Eps = new ReportData();
@@ -96,14 +95,14 @@ public class StaticRepository {
         q4Bahn2019.setId(3);
         q4Bahn2019.setCompany(bahnhof);
         q4Bahn2019.setYear(2019);
-        q4Bahn2019.setPeriod(PeriodEnum.Q4);
+        q4Bahn2019.setPeriod(PeriodEnum.q4);
         q4Bahn2019.setComment("We're going up again!");
 
         ReportCard q1Bahn2020 = new ReportCard();
         q1Bahn2020.setId(20);
         q1Bahn2020.setCompany(bahnhof);
         q1Bahn2020.setYear(2020);
-        q1Bahn2020.setPeriod(PeriodEnum.Q1);
+        q1Bahn2020.setPeriod(PeriodEnum.q1);
         q1Bahn2020.setComment("Jättebra!");
 
         ReportData q4Bahn2019Eps = new ReportData();
@@ -122,7 +121,7 @@ public class StaticRepository {
         q1Apple2019.setId(4);
         q1Apple2019.setCompany(apple);
         q1Apple2019.setYear(2019);
-        q1Apple2019.setPeriod(PeriodEnum.Q4);
+        q1Apple2019.setPeriod(PeriodEnum.q4);
         q1Apple2019.setComment("Nice margins.");
 
         ReportData q1Apple2019Eps = new ReportData();

@@ -1,5 +1,6 @@
 package com.projectx.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ public class ReportCard {
     private PeriodEnum period;
     private String comment;
     private Company company;
-    private List<ReportData> reportDataList;
+    private List<ReportData> reportDataList = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -65,7 +66,10 @@ public class ReportCard {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ReportCard that = (ReportCard) o;
-        return id == that.id;
+        return id == that.id
+                && that.company != null && that.company.equals(this.company)
+                && that.year == this.year
+                && that.period == this.period;
     }
 
     @Override
